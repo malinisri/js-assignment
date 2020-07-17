@@ -1,0 +1,48 @@
+Array Methods
+
+1.shift()
+
+  The shift() method removes the first array element and shifts all other elements to a lower index.
+
+  example: 
+  
+      var programming_languages = ["c", "c++", "java", "python"];
+      programming_languages.shift();
+      
+2.concat()
+
+  The concat() method creates a new array by merging  existing arrays
+  
+  example:
+        var myGirls = ["Cecilie", "Lone"];
+        var myBoys = ["Emil", "Tobias", "Linus"];
+        var myChildren = myGirls.concat(myBoys);
+        
+String Methods
+
+1.search()
+
+ The search() method searches a string for a specified value and returns the position of the match
+ 
+ example:
+ 
+       var str = "Please locate where 'locate' occurs!";
+       var pos = str.search("locate");
+       
+2.toUpperCase()
+
+  A string is converted to upper case
+  
+  example:
+   
+        var text1 = "Hello World!";       
+        var text2 = text1.toUpperCase();
+    
+3.trim()
+
+  The trim() method removes whitespace from both sides of a string
+  
+  example:
+  
+       var str = "       Hello World!        ";
+       alert(str.trim());
