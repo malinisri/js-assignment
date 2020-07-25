@@ -1,0 +1,33 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        let sales = prompt("Enter how many sales you made in the year");
+        const product_price = 50;
+        if (sales >= 0 && sales <= 5000) {
+
+            let commission = Math.round((2 / 100) * sales * product_price);
+            console.log(`Your total commission is ${commission}`);
+        } else if (sales >= 5001 && sales <= 10000) {
+
+            let commission = Math.round((5 / 100) * sales * product_price);
+            console.log(`Your total commission is ${commission}`);
+        } else if (sales >= 10001 && sales <= 20000) {
+
+            let commission = Math.round((7 / 100) * sales * product_price);
+            console.log(`Your total commission is ${commission}`);
+        } else if (sales >= 20000) {
+
+            let commission = Math.round((10 / 100) * sales * product_price);
+            console.log(`Your total commission is ${commission}`);
+        }
+
+    </script>
+
+</body>
+
+</html>

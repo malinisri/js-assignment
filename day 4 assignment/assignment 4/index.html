@@ -1,0 +1,55 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        alert("Welcome to JavaScript Calculator")
+        let operation = prompt("Enter ( + , - , * , / , sqrt , percentage ) To perform operation");
+        switch (operation) {
+            case '+':
+                var a = parseInt(prompt("Enter first number"));
+                var b = parseInt(prompt("Enter second number"));
+                var c = (a + b);
+                alert(a + " + " + b + " = " + c);
+                break;
+            case '-':
+                var a = parseInt(prompt("Enter first number"));
+                var b = parseInt(prompt("Enter second number"));
+                var c = a - b;
+                alert(a + " - " + b + " = " + c);
+                break;
+            case '*':
+                var a = parseInt(prompt("Enter first number"));
+                var b = parseInt(prompt("Enter second number"));
+                var c = a * b;
+                alert(a + " * " + b + " = " + c);
+                break;
+            case '/':
+                var a = parseInt(prompt("Enter first number"));
+                var b = parseInt(prompt("Enter second number"));
+                var c = a / b;
+                alert(a + " / " + b + " = " + c);
+                break;
+            case 'sqrt':
+                var a = parseInt(prompt("Enter a number"));
+                var b = Math.sqrt(a);
+                alert("Square root of " + a + " = " + b);
+                break;
+            case 'percentage':
+                var a = parseInt(prompt("Enter your mark"));
+                var b = parseInt(prompt("Enter the Total marks"));
+                var b = (a / b) * 100;
+                alert("You got " + b + " %");
+                break;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

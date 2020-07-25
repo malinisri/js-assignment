@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Destructure the object</title>
+</head>
+
+<body>
+    <script>
+        const student = {
+            name: "Helsinki",
+            age: 24,
+            projects: {
+                diceGame: "Two player dice game using JavaScript"
+            }
+        };
+
+        const {
+            name,
+            age: years,
+            projects: {
+                diceGame: projectname
+            }
+        } = student;
+
+        alert(name);
+        alert(years);
+        alert(projectname);
+
+    </script>
+
+</body>
+
+</html>
