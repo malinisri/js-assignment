@@ -1,0 +1,102 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        class User {
+
+            constructor(name, age, email) {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+                this.coins = 0;
+                this.courses = [];
+
+
+            }
+
+            login() {
+                console.log(`${this.name} has logged in`);
+                return this;
+
+            }
+
+            logout() {
+                console.log(`${this.name} has logged out`);
+                return this;
+
+            }
+
+        }
+
+        class Moderator extends User {
+
+            addcoins() {
+                this.coins++;
+                console.log(`${this.name} has ${this.coins} coins`);
+                return this;
+
+            }
+
+            removeCoins() {
+                this.coins--;
+                console.log(`${this.name} has ${this.coins} coins`);
+                return this;
+
+            }
+
+
+        }
+
+        class Admin extends Moderator {
+
+            addCourse(course) {
+
+                this.courses.push(course);
+                var details = `Name = ${this.name}, Email = ${this.email},  Age =  ${this.age} has enrolled ${this.courses} course`;
+                console.log(details);
+                return this;
+
+            }
+
+            deleteCourse(course) {
+                let l = this.courses.length;
+                let j;
+
+                for (let i = 0; i < l; i++) {
+                    if (this.courses[i] == course) {
+                        j = i;
+
+                    }
+                }
+                for (let i = j; i < l; i++) {
+                    this.courses[i] = this.courses[i + 1];
+                }
+                this.courses.pop();
+
+
+
+
+
+                var details = `Name = ${this.name}, Email = ${this.email},  Age =  ${this.age} has removed ${course} course`;
+                console.log(details);
+                return this;
+
+            }
+
+        }
+        let user1 = new Admin("kirru", 19, "abc@gmail.com");
+        user1.login().addcoins().addcoins().removeCoins().addCourse("python").addCourse("C").addCourse("c++").deleteCourse("python").addCourse("java").deleteCourse("c++").addCourse("R").logout();
+
+        let user2 = new Admin("juni", 22, "xyz@gmail.com");
+
+        user2.login().addcoins().addcoins().addcoins().addcoins().removeCoins().addCourse("C#").addCourse("R").addCourse("C++").addCourse("javaScript").deleteCourse("R").addCourse("python").logout();
+
+    </script>
+
+</body>
+
+</html>

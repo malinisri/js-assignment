@@ -1,0 +1,22 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        let num = prompt("Enter a positive number");
+        let arr = [];
+        for (let i = 1; i <= num; i++) {
+            arr.push(i);
+        }
+        let oddnumbers = arr.filter(el => el % 2 == 1);
+        let cubes = oddnumbers.map((el) => el ** 3);
+        console.log(cubes);
+
+    </script>
+
+</body>
+
+</html>
